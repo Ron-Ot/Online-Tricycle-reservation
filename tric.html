@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tricycle Reservation System - Mamatid, Cabuyao</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tricycle Reservation System</h1>
+        <form id="reservationForm">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contact">Contact Number:</label>
+                <input type="tel" id="contact" name="contact" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pickup">Pickup Point:</label>
+                <select id="pickup" name="pickup" required>
+                    <option value="Jollibee Terminal">Jollibee Terminal</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="destination">Destination:</label>
+                <select id="destination" name="destination" required>
+                    <option value="Mabuhay">Mabuhay</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="departureDate">Departure Date:</label>
+                <input type="date" id="departureDate" name="departureDate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="departureTime">Departure Time:</label>
+                <input type="time" id="departureTime" name="departureTime" required>
+            </div>
+
+            <div class="form-group">
+                <label for="payment">Payment Method:</label>
+                <select id="payment" name="payment" required>
+                    <option value="gcash">GCash</option>
+                    <option value="credit_card">Credit Card</option>
+                </select>
+            </div>
+
+            <button type="submit">Confirm Reservation - PHP 25.00</button>
+        </form>
+
+        <div id="ticket" class="ticket hidden">
+            <h2>Reservation Confirmed!</h2>
+            <p><strong>Virtual Ticket:</strong></p>
+            <p id="ticketDetails"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!-- ticket.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Virtual Ticket</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Reservation Confirmed!</h1>
+        <div id="ticketDetails" class="ticket">
+            <!-- Ticket details will be loaded here via JavaScript -->
+        </div>
+        <button onclick="window.print()">Print Ticket</button>
+        <button onclick="window.location.href='index.html'">Back to Reservation</button>
+    </div>
+
+    <script>
+        // Retrieve ticket details from localStorage
+        const ticketDetails = localStorage.getItem('ticketDetails');
+        if (ticketDetails) {
+            document.getElementById('ticketDetails').innerHTML = ticketDetails;
+        } else {
+            document.getElementById('ticketDetails').innerHTML = "<p>No ticket details found.</p>";
+        }
+    </script>
+</body>
+</html>
